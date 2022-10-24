@@ -32,7 +32,7 @@
     <string name="casting">What happens if you have a variable that stores an Int data type but you
         want to convert it to a Float data type so you can hold onto the decimal points? Changing
         data types is called CASTING. Lets look again at our previous example, an Int data type
-        variable named \'number storing the value 8.3. We can CAST (or change) our variable type of
+        variable named \'number\' storing the value 8.3. We can CAST (or change) our variable type of
         Int to a Float by writing: float(number).</string>
 
     <string name="input">Now lets look at a common use of variables. Getting and storing input from
