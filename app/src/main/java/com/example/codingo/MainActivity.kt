@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         signIn.setOnClickListener {
             val intent = Intent(this, com.example.codingo.Map::class.java)
             startActivity(intent)
-            finish();
+            finish()
         }
 
 

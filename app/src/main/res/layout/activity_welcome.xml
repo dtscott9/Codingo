@@ -10,35 +10,43 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="88dp"
         android:text="Welcome to Codingo!"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/python_logo"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="268dp" />
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/python_logo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/tips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="68dp"
         android:backgroundTint="#FF9800"
         android:text="Tips"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="480dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/unitId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Unit 1"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="#FF9800"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="480dp" />
+        android:text="Start Unit 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
