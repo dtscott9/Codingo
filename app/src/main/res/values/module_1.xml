@@ -11,8 +11,8 @@
         keep track of information. A variable is a value that is able to change depending on
         conditions or other information passed to the program. They can hold different data types
         such as an integer or a string. For example, you could create a variable named
-        'example_string' and assign it a string: "Hello World!". Now if we tell the computer
-        to print out the contents of 'example_string'. The computer would then print on the screen
+        \'example_string\' and assign it a string: "Hello World!". Now if we tell the computer
+        to print out the contents of \'example_string\'. The computer would then print on the screen
         "Hello World!" In this lesson we will go over data types that can be stored in variables
         and how to declare them.</string>
 
@@ -24,15 +24,15 @@
         use these data types to store text or single characters. Ints, or Integers, and Floats
         are number data types. Ints store whole numbers, cutting off decimal points (without
         rounding. It just truncates whatever is after the decimal point). For example if
-        a variable named 'number' stored an Int data type but the value stored was 8.3, when asked
-        to print 'number', the computer would print out just the number 8. Floats store the whole
-        number including decimal points. So if our variable 'number' was a Float data type instead
-        of an Int, when told to print 'number' the computer would print 8.3.</string>
+        a variable named \'number\' stored an Int data type but the value stored was 8.3, when asked
+        to print \'number\', the computer would print out just the number 8. Floats store the whole
+        number including decimal points. So if our variable \'number\' was a Float data type instead
+        of an Int, when told to print \'number\' the computer would print 8.3.</string>
 
     <string name="casting">What happens if you have a variable that stores an Int data type but you
         want to convert it to a Float data type so you can hold onto the decimal points? Changing
         data types is called CASTING. Lets look again at our previous example, an Int data type
-        variable named 'number storing the value 8.3. We can CAST (or change) our variable type of
+        variable named \'number storing the value 8.3. We can CAST (or change) our variable type of
         Int to a Float by writing: float(number).</string>
 
     <string name="input">Now lets look at a common use of variables. Getting and storing input from
@@ -44,7 +44,7 @@
         number1 = input(println("What is your first number? "))
         number2 = input(println("What is your second number?))
 
-        Our variables are: 'name', 'number1', and 'number2'. We use input() to tell the program we
+        Our variables are: \'name\', \'number1\', and \'number2\'. We use input() to tell the program we
         want to get input from the user. println() tells the computer to print something to the
         screen.
     </string>
