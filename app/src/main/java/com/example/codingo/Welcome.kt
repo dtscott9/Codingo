@@ -21,7 +21,7 @@ class Welcome : AppCompatActivity() {
         }
 
         start.setOnClickListener{
-            val intent1 = Intent(this, practice_mchoice::class.java)
+            val intent1 = Intent(this, MultipleChoice::class.java)
             startActivity(intent1)
             finish()
         }

@@ -13,7 +13,7 @@ class activity_tips : AppCompatActivity() {
 
         next = findViewById(R.id.next)
         next.setOnClickListener{
-            val intent = Intent(this, practice_mchoice::class.java)
+            val intent = Intent(this, MultipleChoice::class.java)
             startActivity(intent)
             finish()
         }

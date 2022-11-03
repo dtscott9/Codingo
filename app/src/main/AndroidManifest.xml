@@ -20,7 +20,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".practice_mchoice"
+            android:name=".MultipleChoice"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
