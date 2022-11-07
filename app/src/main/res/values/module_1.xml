@@ -68,6 +68,13 @@
         <item name="question_1_choice_3">Float</item>
         <item name="question_1_choice_4">Boolean</item>
         <item name="answer_1">String</item>
+        <item>What is my name?</item>
+        <item>Seth</item>
+        <item>Kaleb</item>
+        <item>Lee</item>
+        <item>Dylan</item>
+        <item name="answer_2">Seth</item>
+
 
     </string-array>
 
