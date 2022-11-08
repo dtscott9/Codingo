@@ -16,6 +16,7 @@
         "Hello World!" In this lesson we will go over data types that can be stored in variables
         and how to declare them.</string>
 
+
     <string name="variable_declaration">Python has no command for declaring a variable. You simply
         type the desired name of the variable and assign it a value. </string>
 
@@ -39,13 +40,14 @@
         a user. Say you want to write a program that will get someone\'s name and then two numbers
         that they want to get the sum of. You would need to get input from the user and store it in
         a variable. Your code would look something like this:
+     </string>
 
-        name = input(println("What is your name? ))
-        number1 = input(println("What is your first number? "))
-        number2 = input(println("What is your second number?))
-
+        name = input(print("What is your name? ))
+        number1 = input(print("What is your first number? "))
+        number2 = input(print("What is your second number?))
+    <string name="input2">
         Our variables are: \'name\', \'number1\', and \'number2\'. We use input() to tell the program we
-        want to get input from the user. println() tells the computer to print something to the
+        want to get input from the user. print() tells the computer to print something to the
         screen.
     </string>
 
