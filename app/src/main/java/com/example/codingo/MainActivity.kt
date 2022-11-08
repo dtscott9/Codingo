@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val login = Intent(this, Map::class.java)
+                        val login = Intent(this, Welcome::class.java)
                         startActivity(login)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         // Checking if user is signed in, if so, sending them to next activity
         val currentUser = Firebase.auth.currentUser
         if (currentUser != null) {
-            val intent = Intent(this, com.example.codingo.Map::class.java)
+            val intent = Intent(this, com.example.codingo.Welcome::class.java)
             startActivity(intent)
             finish()
         }
