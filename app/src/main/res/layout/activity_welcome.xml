@@ -20,10 +20,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="187dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipsHead"
         app:srcCompat="@drawable/python_logo" />
@@ -89,6 +89,16 @@
             android:textAlignment="viewStart" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dingo"
+        android:layout_width="176dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipsHead"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
