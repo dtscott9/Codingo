@@ -84,15 +84,6 @@
         app:rippleColor="#291717"
         app:strokeColor="#FF5722" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="255dp"
-        android:layout_height="252dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="76dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/test_logo" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

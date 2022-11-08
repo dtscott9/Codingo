@@ -32,6 +32,8 @@ class Map : AppCompatActivity() {
 
         tips.setOnClickListener{
             val intent1 = Intent(this, activity_tips::class.java)
+            intent1.putExtra("lessonNumber", lessonNumber)
+            intent1.putExtra("lessonName", lessonName)
             startActivity(intent1)
             finish()
         }
