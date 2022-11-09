@@ -36,25 +36,23 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="157dp"
-            android:layout_height="161dp"
-            android:layout_marginTop="252dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.858"
+            android:layout_width="137dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="328dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unitContent"
             app:srcCompat="@drawable/checkpoint" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="158dp"
-            android:layout_height="139dp"
-            android:layout_marginTop="240dp"
+            android:id="@+id/jeep"
+            android:layout_width="656dp"
+            android:layout_height="495dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintHorizontal_bias="0.791"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unitContent"
-            app:srcCompat="@drawable/jeep" />
+            app:layout_constraintTop_toBottomOf="@+id/unitContent" />
 
         <Button
             android:id="@+id/tips"
