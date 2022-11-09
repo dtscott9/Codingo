@@ -1,12 +1,16 @@
 package com.example.codingo
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 class Map : AppCompatActivity() {
+    private lateinit var jeepAnimation: AnimationDrawable
+    private lateinit var jeepImage: ImageView
     private lateinit var begin:Button
     private lateinit var lesson:TextView
     private lateinit var tips:Button
@@ -24,6 +28,11 @@ class Map : AppCompatActivity() {
         lesson.text = "Lesson ${lessonNumber}:"
         lessonContent.text = lessonName
 
+        //Animation Variables
+        jeepImage = findViewById(R.id.jeep)
+        jeepImage.setBackgroundResource(R.drawable.jeep_animation)
+        jeepAnimation = jeepImage.background as AnimationDrawable
+
         begin.setOnClickListener{
             val intent = Intent(this, MultipleChoice::class.java)
             startActivity(intent)
@@ -37,5 +46,9 @@ class Map : AppCompatActivity() {
             startActivity(intent1)
             finish()
         }
+
     }
-}
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        jeepAnimation.start()
+} }
