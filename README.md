@@ -19,6 +19,7 @@ It is a DuoLingo-type app to teach basic principles of coding. There will be mul
 
 * Android Studio
 * Google Firebase
+* Koltin
 
 {Describe the programming language that you used and any libraries.}
 
