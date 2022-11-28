@@ -7,7 +7,9 @@
 {If this is an online class, then provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 
 The name of the project we call it Codingo
-<img src="main/image.png" alt="image.png" width="300"/>
+
+<img src="image.png" alt="image.png" width="300"/>
+
 It is a DuoLingo-type app to teach basic principles of coding. There will be multiple levels teaching the building blocks of programming, such as syntax, functions, if statements, and loops. We will teach the user Python. The app will mainly target secondary students, middle and high school, but would be available to anyone.
 
 
