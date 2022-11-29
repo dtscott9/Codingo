@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/jeep"
+        android:id="@+id/livesIcon"
         android:layout_width="187dp"
         android:layout_height="151dp"
         android:layout_marginStart="208dp"
@@ -37,7 +37,7 @@
         android:backgroundTint="#FF9800"
         android:text="Learn Python"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jeep" />
+        app:layout_constraintTop_toBottomOf="@+id/livesIcon" />
 
     <LinearLayout
         android:id="@+id/lessonButtons"

@@ -29,7 +29,7 @@ class Map : AppCompatActivity() {
         lessonContent.text = lessonName
 
         //Animation Variables
-        jeepImage = findViewById(R.id.jeep)
+        jeepImage = findViewById(R.id.livesIcon)
         jeepImage.setBackgroundResource(R.drawable.jeep_animation)
         jeepAnimation = jeepImage.background as AnimationDrawable
 
