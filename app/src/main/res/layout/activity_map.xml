@@ -35,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lesson" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/hintsIcon"
         android:layout_width="180dp"
         android:layout_height="230dp"
         android:layout_marginStart="272dp"
@@ -45,11 +45,11 @@
         app:srcCompat="@drawable/checkpoint" />
 
     <ImageView
-            android:id="@+id/jeep"
+            android:id="@+id/livesIcon"
             android:layout_width="656dp"
             android:layout_height="495dp"
             android:layout_marginTop="12dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/hintsIcon"
             app:layout_constraintHorizontal_bias="0.791"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unitContent" />
@@ -82,8 +82,8 @@
         android:layout_marginTop="40dp"
         android:text="greeting = &quot;Hello World&quot;"
         android:textColor="#F4F4F4"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/hintsIcon"
+        app:layout_constraintTop_toTopOf="@+id/hintsIcon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

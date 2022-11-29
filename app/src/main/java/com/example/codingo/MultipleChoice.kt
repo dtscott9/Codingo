@@ -1,8 +1,11 @@
 package com.example.codingo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 
@@ -18,6 +21,8 @@ class MultipleChoice : AppCompatActivity() {
     lateinit var validityOutput : TextView
     lateinit var lessonName : TextView
     lateinit var livesOutput : TextView
+    lateinit var menuButton: Button
+    lateinit var gameOver: ImageView
 
 
 
@@ -39,11 +44,31 @@ class MultipleChoice : AppCompatActivity() {
         validityOutput = findViewById(R.id.validityOutput)
         lessonName = findViewById(R.id.lessonName)
         livesOutput = findViewById(R.id.livesLeft)
+        menuButton = findViewById(R.id.mainMenu)
+        gameOver = findViewById(R.id.sadDingo)
+
+        menuButton.visibility = View.GONE
+
+        gameOver.visibility = View.GONE
+
+        menuButton.setOnClickListener {
+            val intent = Intent(this, Welcome::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         lessonName.text = getString(R.string.lesson_name) + ": " + getString(R.string.lesson_title)
 
 
         fun loadQuestions(questionNumber : Int) {
+
+            validityOutput.text = ""
+            continueButton.visibility = View.GONE
+            backButton.visibility = View.GONE
+            choice1.visibility = View.VISIBLE
+            choice2.visibility = View.VISIBLE
+            choice3.visibility = View.VISIBLE
+            choice4.visibility = View.VISIBLE
 
             val questionIndex = questionNumber * 6
 
@@ -56,10 +81,38 @@ class MultipleChoice : AppCompatActivity() {
             fun checkValidity(button: Button) {
                 if (button.text == answer) {
                     validityOutput.text = "That is correct!"
+
+                    choice1.visibility = View.GONE
+                    choice2.visibility = View.GONE
+                    choice3.visibility = View.GONE
+                    choice4.visibility = View.GONE
+                    continueButton.visibility = View.VISIBLE
+                    backButton.visibility = View.VISIBLE
                 } else {
-                    lives -= 1
-                    livesOutput.text = "Lives: " + lives.toString()
-                    validityOutput.text = "That is incorrect!"
+
+                    if (lives >= 2) {
+                        lives -= 1
+                        livesOutput.text = "Lives: " + lives.toString()
+                        validityOutput.text = "That is incorrect!"
+                    }
+                    else {
+                        lives = 0
+                        gameOver.visibility = View.VISIBLE
+                        livesOutput.text = "Lives: " + lives.toString()
+                        validityOutput.text = "Game Over"
+
+                        menuButton.visibility = View.VISIBLE
+                        questionOutput.visibility = View.GONE
+                        choice1.visibility = View.GONE
+                        choice2.visibility = View.GONE
+                        choice3.visibility = View.GONE
+                        choice4.visibility = View.GONE
+                        continueButton.visibility = View.GONE
+                        backButton.visibility = View.GONE
+                        lessonName.visibility = View.GONE
+                        livesOutput.visibility = View.GONE
+
+                    }
                 }
             }
 

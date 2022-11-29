@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/hintsIcon"
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:layout_marginStart="10dp"
@@ -42,7 +42,7 @@
         android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/lessonContent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/hintsIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
