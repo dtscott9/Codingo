@@ -16,6 +16,7 @@
         "Hello World!" In this lesson we will go over data types that can be stored in variables
         and how to declare them.</string>
 
+
     <string name="variable_declaration">Python has no command for declaring a variable. You simply
         type the desired name of the variable and assign it a value. </string>
 
@@ -39,13 +40,14 @@
         a user. Say you want to write a program that will get someone\'s name and then two numbers
         that they want to get the sum of. You would need to get input from the user and store it in
         a variable. Your code would look something like this:
+     </string>
 
-        name = input(println("What is your name? ))
-        number1 = input(println("What is your first number? "))
-        number2 = input(println("What is your second number?))
-
+        name = input(print("What is your name? ))
+        number1 = input(print("What is your first number? "))
+        number2 = input(print("What is your second number?))
+    <string name="input2">
         Our variables are: \'name\', \'number1\', and \'number2\'. We use input() to tell the program we
-        want to get input from the user. println() tells the computer to print something to the
+        want to get input from the user. print() tells the computer to print something to the
         screen.
     </string>
 
@@ -62,13 +64,31 @@
         z = str(3.0)  # z will be \'3.0\'</string>
 
     <string-array name="module_1_questions">
-        <item name="question_1">Which data type is used for storing characters?</item>
-        <item name="question_1_choice_1">Int</item>
-        <item name="question_1_choice_2">String</item>
-        <item name="question_1_choice_3">Float</item>
-        <item name="question_1_choice_4">Boolean</item>
-        <item name="answer_1">String</item>
-
+<!--All of the questions and answer choices are stored into one string-array.-->
+        <item name="question_1">Which data type is used for storing characters?</item> <!-- Question 1-->
+        <item name="question_1_choice_1">Int</item> <!-- Answer choice 1-->
+        <item name="question_1_choice_2">String</item> <!-- Answer choice 2-->
+        <item name="question_1_choice_3">Float</item> <!-- Answer choice 3-->
+        <item name="question_1_choice_4">Boolean</item> <!-- Answer choice 4-->
+        <item name="answer_1">String</item> <!-- Answer -->
+        <item>What data type is True</item> <!-- Next question -->
+        <item>String</item>
+        <item>Int</item>
+        <item>Boolean</item>
+        <item>Double</item>
+        <item name="answer_2">Boolean</item>
+        <item>Which built-in Python function gets input from the user?</item> <!-- Next Question -->
+        <item>print()</item>
+        <item>getInput()</item>
+        <item>input()</item>
+        <item>range()</item>
+        <item>input()</item>
+        <item>What is used to store information, such as example_string = "Hello World"?</item> <!-- Next Question -->
+        <item>A variable</item>
+        <item>A function</item>
+        <item>A data type</item>
+        <item>A file</item>
+        <item>A variable</item>
     </string-array>
 
 
