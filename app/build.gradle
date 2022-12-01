@@ -1,55 +1,55 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
+package com.example.codingo
 
-android {
-    namespace 'com.example.codingo'
-    compileSdk 32
+import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.core.view.forEach
 
-    defaultConfig {
-        applicationId "com.example.codingo"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+class Welcome : AppCompatActivity() {
+    private lateinit var dingoIdle: AnimationDrawable
+    private lateinit var dingoImage:ImageView
+    private lateinit var tips: Button
+    private lateinit var start: Button
+    private lateinit var lessonButtons: LinearLayout
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_welcome)
+        start = findViewById(R.id.unitId)
+        lessonButtons = findViewById(R.id.lessonButtons)
+        lessonButtons.visibility = View.GONE
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+        //Animation members
+        dingoImage = findViewById(R.id.dingo)
+        dingoImage.setBackgroundResource(R.drawable.dingo_idle_animation)
+        dingoIdle = dingoImage.background as AnimationDrawable
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        start.setOnClickListener{
+//
+            lessonButtons.visibility = View.VISIBLE
+        }
+
+        lessonButtons.forEach { lesson ->
+            if (lesson is Button) {
+                lesson.setOnClickListener{
+                    val lessonNumber = lesson.text[0].toString().toInt()
+                    val lessonContent = lesson.text.drop(3)
+                    val intent1 = Intent(this, com.example.codingo.Map::class.java)
+                    intent1.putExtra("lessonNumber", lessonNumber)
+                    intent1.putExtra("lessonName", lessonContent)
+                    startActivity(intent1)
+                    finish()
+                }
+            }
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        dingoIdle.start()
     }
 }
-
-dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    // Import Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:30.4.1')
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    // Add the dependencies for any other desired Firebase products
-    implementation 'com.google.firebase:firebase-auth:21.1.0'
-    // https://firebase.google.com/docs/android/setup#available-libraries
-}
-// ADD THIS AT THE BOTTOM
-apply plugin: 'com.google.gms.google-services'
