@@ -6,7 +6,7 @@
 
     <string name="lesson_title">Variable Declaration</string>
 
-    <string name="variables_intro">Variables are the basics of coding. Programs consist of
+    <string name="tip_1">Variables are the basics of coding. Programs consist of
         instructions that tell the computer what to do. Variables are essential to this. They
         keep track of information. A variable is a value that is able to change depending on
         conditions or other information passed to the program. They can hold different data types
@@ -18,9 +18,10 @@
 
 
     <string name="variable_declaration">Python has no command for declaring a variable. You simply
+
         type the desired name of the variable and assign it a value. </string>
 
-    <string name="value_types">There are several types of variables. The most basic value types
+    <string name="tip_3">There are several types of variables. The most basic value types
         are Strings, Chars, Ints, Floats, and Booleans. Strings and Chars are character types. You
         use these data types to store text or single characters. Ints, or Integers, and Floats
         are number data types. Ints store whole numbers, cutting off decimal points (without
@@ -30,13 +31,13 @@
         number including decimal points. So if our variable \'number\' was a Float data type instead
         of an Int, when told to print \'number\' the computer would print 8.3.</string>
 
-    <string name="casting">What happens if you have a variable that stores an Int data type but you
+    <string name="tip_4">What happens if you have a variable that stores an Int data type but you
         want to convert it to a Float data type so you can hold onto the decimal points? Changing
         data types is called CASTING. Lets look again at our previous example, an Int data type
         variable named \'number\' storing the value 8.3. We can CAST (or change) our variable type of
         Int to a Float by writing: float(number).</string>
 
-    <string name="input">Now lets look at a common use of variables. Getting and storing input from
+    <string name="tip_5">Now lets look at a common use of variables. Getting and storing input from
         a user. Say you want to write a program that will get someone\'s name and then two numbers
         that they want to get the sum of. You would need to get input from the user and store it in
         a variable. Your code would look something like this:
@@ -51,15 +52,15 @@
         screen.
     </string>
 
-    <string name="example1">x = int(1)   # x will be 1
+    <string name="example_1">x = int(1)   # x will be 1
         y = int(2.8) # y will be 2
         z = int("3") # z will be 3</string>
 
-    <string name="example2">x = float(1)     # x will be 1.0
+    <string name="example_2">x = float(1)     # x will be 1.0
         y = float(2.8)   # y will be 2.8
         z = float("3")   # z will be 3.0
         w = float("4.2") # w will be 4.2</string>
-    <string name="example3">x = str("s1") # x will be \'s1\'
+    <string name="example_3">x = str("s1") # x will be \'s1\'
         y = str(2)    # y will be \'2\'
         z = str(3.0)  # z will be \'3.0\'</string>
 
