@@ -7,38 +7,98 @@
     tools:context=".Welcome">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tipsHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="88dp"
         android:text="Welcome to Codingo!"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/python_logo"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="268dp" />
+        android:id="@+id/livesIcon"
+        android:layout_width="187dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipsHead"
+        app:srcCompat="@drawable/python_logo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/unitId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="128dp"
         android:backgroundTint="#FF9800"
-        android:text="Tips"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="480dp" />
+        android:text="Learn Python"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/livesIcon" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Unit 1"
-        android:backgroundTint="#FF9800"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="480dp" />
+    <LinearLayout
+        android:id="@+id/lessonButtons"
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/lesson1"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="1: Variable Declarations"
+            android:textAlignment="viewStart" />
+
+        <Button
+            android:id="@+id/lesson2"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="2: Conditionals"
+            android:textAlignment="viewStart" />
+
+        <Button
+            android:id="@+id/lesson3"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="3: Loops"
+            android:textAlignment="viewStart" />
+
+        <Button
+            android:id="@+id/lesson4"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="4: Functions"
+            android:textAlignment="viewStart" />
+
+        <Button
+            android:id="@+id/lesson5"
+            android:layout_width="430dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="5: Classes"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dingo"
+        android:layout_width="176dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipsHead"
+         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
