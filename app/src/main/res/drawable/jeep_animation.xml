@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/dingo_on_jeep_1"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_2"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_3"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_4"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_5"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_6"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_7"
+        android:duration="100" />
+    <item android:drawable="@drawable/dingo_on_jeep_8"
+        android:duration="100" />
+</animation-list>

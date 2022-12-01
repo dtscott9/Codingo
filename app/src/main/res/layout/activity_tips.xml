@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tipsHead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Module Tips"
+            android:textAlignment="center"
+            android:layout_marginTop="25dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lessonContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tipsHead"
+            android:text="Learn Python"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/pyLogo"-->
+<!--            android:layout_width="147dp"-->
+<!--            android:layout_height="124dp"-->
+<!--            android:layout_toEndOf="@id/lessonContent"-->
+<!--            app:srcCompat="@drawable/python_logo" />-->
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lessonContent"
+            android:layout_marginTop="0dp"
+            android:padding="15dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam."
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/checkpoint"
+            android:layout_below="@id/intro"
+            app:srcCompat="@drawable/lesson1_pic_1" />
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image1"
+            android:padding="15dp"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tip1"
+            android:padding="15dp"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="match_parent"
+            android:layout_height="392dp"
+            android:layout_below="@id/tip2"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/checkpoint"
+            app:srcCompat="@drawable/lesson1_pic_2" />
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image2"
+            android:padding="15dp"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_below="@id/tip3"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/checkpoint"
+            app:srcCompat="@drawable/lesson1_pic_3" />
+
+
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Continue"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/image3"
+        />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.NestedScrollView>

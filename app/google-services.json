@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "551861101771",
+    "project_id": "codingo-ddba0",
+    "storage_bucket": "codingo-ddba0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551861101771:android:07a57830fea32143afa74e",
+        "android_client_info": {
+          "package_name": "com.example.codingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551861101771-2dmdfk4vl4bjm4ro7li7k28l3uln48fs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codingo",
+            "certificate_hash": "5798acb73f08a4a2c927975d6384e3c76ec241ab"
+          }
+        },
+        {
+          "client_id": "551861101771-ji8hpfnka82d78bj18fj18nqkdr9dho6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBisvxvDdSbMHYODwT4L_BOiicnfWHljkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551861101771-ji8hpfnka82d78bj18fj18nqkdr9dho6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

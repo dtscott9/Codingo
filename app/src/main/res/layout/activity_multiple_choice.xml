@@ -11,30 +11,31 @@
         android:layout_width="288dp"
         android:layout_height="93dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="274dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginBottom="350dp"
+        android:layout_marginBottom="432dp"
         android:text="Question"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/lessonName" />
 
     <TextView
         android:id="@+id/validityOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="184dp"
         android:layout_marginEnd="177dp"
-        android:text="Validity Output"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text=""
         android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <TextView
         android:id="@+id/lessonName"
@@ -54,44 +55,42 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="258dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 1"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="258dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 2"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="258dp"
         android:layout_marginBottom="17dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 3"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
@@ -102,9 +101,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="258dp"
         android:layout_marginBottom="63dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 4"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -112,9 +115,10 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="20dp"
-        android:text="hintsleft"
+        android:text="Hints"
+        app:layout_constraintBottom_toTopOf="@+id/lessonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,28 +127,79 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="12dp"
         android:text="Lives: 5"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lessonName"
+        app:layout_constraintEnd_toStartOf="@+id/livesIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/hintsIcon"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/lessonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_star_big_off" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hinticon" />
+
+    <ImageView
+        android:id="@+id/livesIcon"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/lessonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/livesicon_1" />
+
+    <Button
+        android:id="@+id/nextQuestion"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previousQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/previousQuestion"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextQuestion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="148dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Main Menu"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validityOutput" />
+
+    <ImageView
+        android:id="@+id/sadDingo"
+        android:layout_width="247dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dingo_sad" />
 </androidx.constraintlayout.widget.ConstraintLayout>
