@@ -11,8 +11,10 @@ It is a DuoLingo-type app to teach basic principles of coding. There will be mul
 # Development Environment
 
 * Android Studio
+  *  2021.3.1 (Dolphin) / 15 September 2022
 * Google Firebase
 * Koltin
+  * 1.7.20
 
 # Collaborators
 
@@ -26,7 +28,7 @@ It is a DuoLingo-type app to teach basic principles of coding. There will be mul
 # Useful Websites
 
 * [Koltin tutorial in w3school](https://www.w3schools.com/KOTLIN/index.php)
-* [Web Site Name](http://url.link.goes.here)
+* [Android Studio official site]([http://url.link.goes.here](https://developer.android.com/studio))
 
 # Future Work
 
