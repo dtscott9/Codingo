@@ -12,6 +12,7 @@ import android.widget.TextView
 
 
 class MultipleChoice : AppCompatActivity() {
+    // Initialize variables
     lateinit var choice1: Button
     lateinit var choice2: Button
     lateinit var choice3: Button
@@ -35,16 +36,19 @@ class MultipleChoice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multiple_choice)
 
-
+        // Get values from previous intent
         val prevIntent:Intent = getIntent()
         val lessonNumber = prevIntent.getIntExtra("lessonNumber", 1)
         val moduleName = prevIntent.getStringExtra("lessonName")
 
+        // Change the questions loaded based on the lessonNumber
         val question = when (lessonNumber) {
             1 -> resources.getStringArray(R.array.module_1_questions)
             2 ->  resources.getStringArray(R.array.module_2_questions)
+            5 -> resources.getStringArray(R.array.module_5_questions)
             else ->  resources.getStringArray(R.array.module_1_questions)
         }
+        // Set lives to 5
         var lives = 5
 
 
@@ -71,14 +75,17 @@ class MultipleChoice : AppCompatActivity() {
 
         gameOver.visibility = View.GONE
 
+        // Home button
         menuButton.setOnClickListener {
             val intent = Intent(this, Welcome::class.java)
             startActivity(intent)
             finish()
         }
 
+
         lessonName.text = getString(R.string.lesson_1_name) + ": " + getString(R.string.lesson_1_title)
 
+        // Load the questions based on the lessonNumber
         fun loadQuestions(questionNumber : Int, lessonNumber: Int, question: Array<String>) {
             correct.visibility = View.GONE
             sitting.visibility = View.VISIBLE
@@ -93,6 +100,7 @@ class MultipleChoice : AppCompatActivity() {
             val questionIndex = questionNumber * 6
             lessonName.text = "Module " + lessonNumber.toString()
 
+            // Set the text values of each answer choice button
             questionOutput.text = question[questionIndex]
             choice1.text = question[questionIndex + 1]
             choice2.text = question[questionIndex + 2]
@@ -100,6 +108,7 @@ class MultipleChoice : AppCompatActivity() {
             choice4.text = question[questionIndex + 4]
             val answer : String = question[questionIndex + 5]
             fun checkValidity(button: Button) {
+                // If correct
                 if (button.text == answer) {
                     sitting.visibility = View.GONE
                     correct.visibility = View.VISIBLE
@@ -111,7 +120,7 @@ class MultipleChoice : AppCompatActivity() {
                     continueButton.visibility = View.VISIBLE
                     backButton.visibility = View.VISIBLE
                 } else {
-
+                // If incorrect
                     if (lives >= 2) {
                         lives -= 1
                         livesOutput.text = "Lives: " + lives.toString()
@@ -139,7 +148,7 @@ class MultipleChoice : AppCompatActivity() {
                 }
             }
 
-
+            // Set on click listeners for each answer choice
             choice1.setOnClickListener {
                 checkValidity(choice1)
             }
@@ -157,10 +166,11 @@ class MultipleChoice : AppCompatActivity() {
 
         var questionNumber = 0
         loadQuestions(questionNumber, lessonNumber, question)
-
+        // Click listeners for back and continue buttons
         continueButton.setOnClickListener {
 
             if (questionNumber >= ((question.size / 6) - 1)) {
+                // If last question then go to home page
                 val intent = Intent(this, Welcome::class.java)
                 startActivity((intent))
                 finish()
@@ -172,7 +182,7 @@ class MultipleChoice : AppCompatActivity() {
         }
         backButton.setOnClickListener {
             if (questionNumber <= 0) {
-
+                // If first question then go to map page
                 val intent = Intent(this, Map::class.java)
                 intent.putExtra("lessonNumber", lessonNumber)
                 intent.putExtra("lessonName", moduleName)
@@ -190,7 +200,7 @@ class MultipleChoice : AppCompatActivity() {
 
 
     }
-
+    // Animations
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         sad_animation.start()
