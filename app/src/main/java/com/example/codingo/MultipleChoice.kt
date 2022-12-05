@@ -1,5 +1,6 @@
 package com.example.codingo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -25,7 +26,16 @@ class MultipleChoice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multiple_choice)
 
-        val question = resources.getStringArray(R.array.module_1_questions)
+
+        val prevIntent:Intent = getIntent()
+        val lessonNumber = prevIntent.getIntExtra("lessonNumber", 1)
+        val moduleName = prevIntent.getStringExtra("lessonName")
+
+        val question = when (lessonNumber) {
+            1 -> resources.getStringArray(R.array.module_1_questions)
+            2 ->  resources.getStringArray(R.array.module_2_questions)
+            else ->  resources.getStringArray(R.array.module_1_questions)
+        }
         var lives = 5
 
 
@@ -40,12 +50,12 @@ class MultipleChoice : AppCompatActivity() {
         lessonName = findViewById(R.id.lessonName)
         livesOutput = findViewById(R.id.livesLeft)
 
-        lessonName.text = getString(R.string.lesson_name) + ": " + getString(R.string.lesson_title)
+        lessonName.text = getString(R.string.lesson_1_name) + ": " + getString(R.string.lesson_1_title)
 
-
-        fun loadQuestions(questionNumber : Int) {
+        fun loadQuestions(questionNumber : Int, lessonNumber: Int, question: Array<String>) {
 
             val questionIndex = questionNumber * 6
+            lessonName.text = "Module " + lessonNumber.toString()
 
             questionOutput.text = question[questionIndex]
             choice1.text = question[questionIndex + 1]
@@ -78,26 +88,31 @@ class MultipleChoice : AppCompatActivity() {
             }
         }
 
+
         var questionNumber = 0
-        loadQuestions(questionNumber)
+        loadQuestions(questionNumber, lessonNumber, question)
+
         continueButton.setOnClickListener {
 
             if (questionNumber >= ((question.size / 6) - 1)) {
 
             } else {
                 questionNumber += 1
-                loadQuestions(questionNumber)
+                loadQuestions(questionNumber, lessonNumber, question)
             }
-
-
 
         }
         backButton.setOnClickListener {
             if (questionNumber <= 0) {
 
+                val intent = Intent(this, Map::class.java)
+                intent.putExtra("lessonNumber", lessonNumber)
+                intent.putExtra("lessonName", moduleName)
+                startActivity(intent)
+                finish()
             } else {
                 questionNumber -= 1
-                loadQuestions(questionNumber)
+                loadQuestions(questionNumber, lessonNumber, question)
             }
 
         }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="module_2_name">Module 2</string>
+
+    <string name="lesson_2_name">Lesson 1</string>
+
+    <string name="lesson_2_title">Conditionals</string>
+
+    <string name="if_statements"> If statements are an important part of any useful programming language.
+    They allow the user to determine which blocks of code will run based on certain conditions.  An if
+    statement in Python looks like this: if "expression": "statement" \n The expression must resolve to
+    either True or False.  If the expression resolves to True, then the proceeding statement will be ran
+    by the program.  Otherwise, the program will skip over the statement and continue running. An else
+    statement can be added to end so that a block of code will be run only if all the if statements in the
+    if else block resolve to False.</string>
+
+    <string name="common_operators"> Here are some common operators used in if expressions: \n
+    less than &#60; \n
+    greater than &#62; \n
+    less than or equal to &#60;= \n
+    greater than or equal to &#62;= \n
+    equal to = \n
+    The "not" operator can be used before an expression to invert the result of the expression.
+    </string>
+
+
+
+    <string-array name="module_2_questions">
+        <!--All of the questions and answer choices are stored into one string-array.-->
+        <item>What must an if statement evaluate to?</item> <!-- Question 1-->
+        <item>True or False</item> <!-- Answer choice 1-->
+        <item>String</item> <!-- Answer choice 2-->
+        <item>Float</item> <!-- Answer choice 3-->
+        <item>Conditional</item> <!-- Answer choice 4-->
+        <item>True or False</item> <!-- Answer -->
+        <item>Which operator inverts a boolean value?</item> <!-- Next question -->
+        <item>\?</item>
+        <item>not</item>
+        <item>**</item>
+        <item>||</item>
+        <item>not</item>
+        <item>What is the correct syntax for an if statement in Python?</item> <!-- Next Question -->
+        <item>if "statement": "expression"</item>
+        <item>if "statement" {"expression"}</item>
+        <item>if ("statement") {"expression"}</item>
+        <item>if "expression": "statement"</item>
+        <item>if "expression": "statement"</item>
+        <item>When is a else statement run?</item> <!-- Next Question -->
+        <item>Only if an if expression resolves to True</item>
+        <item>Only if all if expressions resolve to False</item>
+        <item>Always at the end of an if else block</item>
+        <item>It never runs</item>
+        <item>Only if all if expressions resolve to False</item>
+    </string-array>
+
+
+
+</resources>

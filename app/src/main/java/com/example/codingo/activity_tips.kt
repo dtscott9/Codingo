@@ -47,6 +47,13 @@ class activity_tips : AppCompatActivity() {
                 tip3.text = resources.getString(R.string.input2)
                 lessonPic3.setImageResource(R.drawable.lesson1_pic_3)
             }
+            else if (lessonNum == 2) {
+                lessonIntro.text = resources.getString(R.string.if_statements)
+                tip1.text = resources.getString(R.string.common_operators)
+                lessonPic1.setImageResource(R.drawable.lesson2_pic_1)
+                lessonPic2.setImageResource(R.drawable.lesson2_pic_1)
+
+            }
         }
 
         loadTips(lessonNumber)
