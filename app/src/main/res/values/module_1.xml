@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <string name="module_1_name">Module 1</string>
-=======
+
     <string name="moduleName">Module 1</string>
->>>>>>> 05f476f7a2f812afcc8b64c04b9a960ab556c0b3
 
     <string name="lesson_1_name">Lesson 1</string>
 
