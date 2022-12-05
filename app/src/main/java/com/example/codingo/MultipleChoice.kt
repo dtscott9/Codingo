@@ -58,7 +58,7 @@ class MultipleChoice : AppCompatActivity() {
         correct.setBackgroundResource(R.drawable.dingo_idle_animation)
         correctAnimation = correct.background as AnimationDrawable
 
-        menuButton.visibility = View.GONE
+//        menuButton.visibility = View.GONE
 
         gameOver.visibility = View.GONE
 

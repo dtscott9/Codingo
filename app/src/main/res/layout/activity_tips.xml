@@ -104,18 +104,21 @@
             app:srcCompat="@drawable/lesson1_pic_3" />
 
 
-
         <Button
             android:id="@+id/next"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Continue"
-            android:layout_marginTop="50dp"
             android:layout_below="@id/image3"
-        />
+            android:layout_marginTop="2dp"
+            android:text="Continue" />
 
-
-
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/image3"
+            android:layout_marginTop="50dp"
+            android:text="Home" />
 
 
     </RelativeLayout>

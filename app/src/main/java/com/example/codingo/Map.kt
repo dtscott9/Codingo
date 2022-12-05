@@ -15,12 +15,14 @@ class Map : AppCompatActivity() {
     private lateinit var lesson:TextView
     private lateinit var tips:Button
     private lateinit var lessonContent: TextView
+    private lateinit var homeButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
         begin = findViewById(R.id.start)
         lesson = findViewById(R.id.lesson)
         tips = findViewById(R.id.tips)
+        homeButton = findViewById(R.id.homeButton)
         lessonContent = findViewById(R.id.unitContent)
         val prevIntent:Intent = getIntent()
         val lessonNumber = prevIntent.getIntExtra("lessonNumber", 0)
@@ -46,6 +48,12 @@ class Map : AppCompatActivity() {
             intent1.putExtra("lessonNumber", lessonNumber)
             intent1.putExtra("lessonName", lessonName)
             startActivity(intent1)
+            finish()
+        }
+
+        homeButton.setOnClickListener {
+            val intent2 = Intent(this, Welcome::class.java)
+            startActivity(intent2)
             finish()
         }
 
