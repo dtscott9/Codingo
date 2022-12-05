@@ -39,10 +39,10 @@ class activity_tips : AppCompatActivity() {
 
         fun loadTips (lessonNum:Int) {
             if (lessonNum == 1) {
-                lessonIntro.text = resources.getString(R.string.variables_intro)
+                lessonIntro.text = resources.getString(R.string.tip_1)
                 lessonPic1.setImageResource(R.drawable.lesson1_pic_1)
-                tip1.text = resources.getString(R.string.value_types)
-                tip2.text = resources.getString(R.string.input)
+                tip1.text = resources.getString(R.string.tip_3)
+                tip2.text = resources.getString(R.string.tip_5)
                 lessonPic2.setImageResource(R.drawable.lesson1_pic_2)
                 tip3.text = resources.getString(R.string.input2)
                 lessonPic3.setImageResource(R.drawable.lesson1_pic_3)

@@ -1,6 +1,7 @@
 package com.example.codingo
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,6 +24,10 @@ class MultipleChoice : AppCompatActivity() {
     lateinit var livesOutput : TextView
     lateinit var menuButton: Button
     lateinit var gameOver: ImageView
+    lateinit var sitting : ImageView
+    lateinit var correct : ImageView
+    lateinit var sad_animation: AnimationDrawable
+    lateinit var correctAnimation: AnimationDrawable
 
 
 
@@ -46,6 +51,12 @@ class MultipleChoice : AppCompatActivity() {
         livesOutput = findViewById(R.id.livesLeft)
         menuButton = findViewById(R.id.mainMenu)
         gameOver = findViewById(R.id.sadDingo)
+        gameOver.setBackgroundResource(R.drawable.sad_animation)
+        sad_animation = gameOver.background as AnimationDrawable
+        sitting = findViewById(R.id.dingoSitting)
+        correct = findViewById(R.id.correct)
+        correct.setBackgroundResource(R.drawable.dingo_idle_animation)
+        correctAnimation = correct.background as AnimationDrawable
 
         menuButton.visibility = View.GONE
 
@@ -61,7 +72,8 @@ class MultipleChoice : AppCompatActivity() {
 
 
         fun loadQuestions(questionNumber : Int) {
-
+            correct.visibility = View.GONE
+            sitting.visibility = View.VISIBLE
             validityOutput.text = ""
             continueButton.visibility = View.GONE
             backButton.visibility = View.GONE
@@ -80,8 +92,9 @@ class MultipleChoice : AppCompatActivity() {
             val answer : String = question[questionIndex + 5]
             fun checkValidity(button: Button) {
                 if (button.text == answer) {
+                    sitting.visibility = View.GONE
+                    correct.visibility = View.VISIBLE
                     validityOutput.text = "That is correct!"
-
                     choice1.visibility = View.GONE
                     choice2.visibility = View.GONE
                     choice3.visibility = View.GONE
@@ -101,6 +114,7 @@ class MultipleChoice : AppCompatActivity() {
                         livesOutput.text = "Lives: " + lives.toString()
                         validityOutput.text = "Game Over"
 
+                        sitting.visibility = View.GONE
                         menuButton.visibility = View.VISIBLE
                         questionOutput.visibility = View.GONE
                         choice1.visibility = View.GONE
@@ -161,5 +175,9 @@ class MultipleChoice : AppCompatActivity() {
 
     }
 
-
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        sad_animation.start()
+        correctAnimation.start()
+    }
 }

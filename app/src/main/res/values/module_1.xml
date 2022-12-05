@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="module_name">Module 1</string>
+    <string name="moduleName">Module 1</string>
 
     <string name="lesson_name">Lesson 1</string>
 

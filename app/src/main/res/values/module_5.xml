@@ -59,7 +59,7 @@
     <string name="tip7">You can modify properties on objects like this:
 
         Example: Set the age of p1 to 40 by calling the object and method and using the
-        '=' sign to set the value.
+        \'=\' sign to set the value.
 
 p1.age = 40</string>
     <string name="tip8">Class definitions cannot be empty, but if you for some reason have a
