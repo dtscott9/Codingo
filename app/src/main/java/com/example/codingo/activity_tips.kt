@@ -11,6 +11,7 @@ import org.w3c.dom.Text
 
 class activity_tips : AppCompatActivity() {
     private lateinit var next: Button
+    private lateinit var homeButton: Button
     private lateinit var lessonContent:TextView
     private lateinit var lessonIntro:TextView
     private lateinit var lessonPic1: ImageView
@@ -31,6 +32,7 @@ class activity_tips : AppCompatActivity() {
         lessonPic2 = findViewById(R.id.image2)
         tip3 = findViewById(R.id.tip3)
         lessonPic3 = findViewById(R.id.image3)
+        homeButton = findViewById(R.id.homeButton)
         //Intent Vars
         val prevIntent:Intent = getIntent()
         val lessonNumber = prevIntent.getIntExtra("lessonNumber", 0)
@@ -47,6 +49,13 @@ class activity_tips : AppCompatActivity() {
                 tip3.text = resources.getString(R.string.input2)
                 lessonPic3.setImageResource(R.drawable.lesson1_pic_3)
             }
+            else if (lessonNum == 2) {
+                lessonIntro.text = resources.getString(R.string.if_statements)
+                tip1.text = resources.getString(R.string.common_operators)
+                lessonPic1.setImageResource(R.drawable.lesson2_pic_1)
+                lessonPic2.setImageResource(R.drawable.lesson2_pic_1)
+
+            }
         }
 
         loadTips(lessonNumber)
@@ -55,7 +64,15 @@ class activity_tips : AppCompatActivity() {
         next = findViewById(R.id.next)
         next.setOnClickListener{
             val intent = Intent(this, MultipleChoice::class.java)
+            intent.putExtra("lessonNumber", lessonNumber)
+            intent.putExtra("lessonName", lessonName)
             startActivity(intent)
+            finish()
+        }
+
+        homeButton.setOnClickListener {
+            val intent2 = Intent(this, Welcome::class.java)
+            startActivity(intent2)
             finish()
         }
     }

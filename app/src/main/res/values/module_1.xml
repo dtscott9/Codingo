@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="moduleName">Module 1</string>
 
-    <string name="lesson_name">Lesson 1</string>
+    <string name="lesson_1_name">Lesson 1</string>
 
-    <string name="lesson_title">Variable Declaration</string>
+    <string name="lesson_1_title">Variable Declaration</string>
 
     <string name="tip_1">Variables are the basics of coding. Programs consist of
         instructions that tell the computer what to do. Variables are essential to this. They
