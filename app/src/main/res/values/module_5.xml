@@ -61,9 +61,45 @@
         Example: Set the age of p1 to 40 by calling the object and method and using the
         \'=\' sign to set the value.
 
-p1.age = 40</string>
+        p1.age = 40
+    </string>
     <string name="tip8">Class definitions cannot be empty, but if you for some reason have a
         class definition with no content, put in the pass statement to avoid getting an error.
     </string>
+
+    <string-array name="module_5_questions">
+        <!--All of the questions and answer choices are stored into one string-array.-->
+        <item name="question_1">How do you create a class?</item> <!-- Question 1-->
+        <item name="question_1_choice_1">new Class: MyCLass</item> <!-- Answer choice 1-->
+        <item name="question_1_choice_2">class: MyClass</item> <!-- Answer choice 2-->
+        <item name="question_1_choice_3">python.class = MyClass</item> <!-- Answer choice 3-->
+        <item name="question_1_choice_4">fun class()</item> <!-- Answer choice 4-->
+        <item name="answer_1">class: MyClass</item> <!-- Answer -->
+
+        <item>How do you instantiate an object of one of your classes?</item> <!-- Next question -->
+        <item>x = MyClass()</item>
+        <item>new Object from MyClass = x</item>
+        <item>fun MyClass() = new.x</item>
+        <item>x = new MyClass()</item>
+        <item name="answer_2">x = MyClass()</item>
+
+        <item>How do you create a method in a class that does nothing?</item> <!-- Next question -->
+        <item>mymethod() {Pass = True}</item>
+        <item>MyClass.mymethod.pass()</item>
+        <item>def mymethod() {skip}</item>
+        <item>def mymethod() {pass}</item>
+        <item name="answer_3">def mymethod() {pass}</item>
+
+        <item>What does the __init__() function do?</item> <!-- Next question -->
+        <item>Tells the class where to go to get data to populate an object.</item>
+        <item>Lets the program run. Without the __init__() function, the program will crash.</item>
+        <item>Assigns values to object properties, or other operations that are necessary
+            to do when the object is being created.</item>
+        <item>Creates an instance of the object.</item>
+        <item name="answer_4">Assigns values to object properties, or other operations that are necessary
+            to do when the object is being created.</item>
+
+    </string-array>
+
 
 </resources>
