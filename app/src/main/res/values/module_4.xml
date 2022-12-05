@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_name">Module 4</string>
+
+    <string name="lesson_name">Lesson 1</string>
+
+    <string name="lesson_title">Function Declaration</string>
+
+    <string name="function_intro">A function is a block of code which only runs when it is called.
+        You can pass data, known as parameters, into a function.
+        A function can return data as a result.</string>
+
+
+    <string name="function_declaration">The way to declaration function in Python is using def.
+        for example
+        def function_name():
+            print("…")
+        The way to call function.
+        function_name()
+    </string>
+
+    <string name="Parameters">The terms parameter and argument can be used for the same thing: information that are passed into a function.
+        From a function\'s perspective:
+        A parameter is the variable listed inside the parentheses in the function definition.
+        An argument is the value that is sent to the function when it is called.</string>
+
+    <string name="list">def my_function(food):
+        for x in food:
+            print(x)
+
+        fruits = ["apple", "banana", "cherry"]
+
+        my_function(fruits)</string>
+
+    <string name="return_value">To let a function return a value, use the return statement:
+        def my_function(x):
+            return 5 * x
+
+        print(my_function(3))  # set x = 3 print 15
+        print(my_function(5))  # set x = 5 print 25
+        print(my_function(9))  # set x = 9 print 45</string>
+    <string name="input2"></string>
+
+    <string name="example1">def displayName(fname, lname):  # displayName function
+            print(fname + " " + lname)
+        displayName("Steven", "Williams")  # Arguments for the function
+        displayName("Michael", "Jones")</string>
+
+    <string name="example2"></string>
+
+    <string-array name="module_1_questions">
+<!--All of the questions and answer choices are stored into one string-array.-->
+        <item name="question_1">How to declare a function name called num in Python?</item> <!-- Question 1-->
+        <item name="question_1_choice_1">fun num()</item> <!-- Answer choice 1-->
+        <item name="question_1_choice_2">def num():</item> <!-- Answer choice 2-->
+        <item name="question_1_choice_3">function num()</item> <!-- Answer choice 3-->
+        <item name="question_1_choice_4">class num()</item> <!-- Answer choice 4-->
+        <item name="answer_1">def num():</item> <!-- Answer -->
+        <item>What function will print out 6 when call function def cal(x): return 2 * x </item> <!-- Next question -->
+        <item>cal(0)</item>
+        <item>cal(1)</item>
+        <item>cal(2)</item>
+        <item>cal(3)</item>
+        <item name="answer_2">cal(3)</item>
+    </string-array>
+
+
+    </resources>
+
