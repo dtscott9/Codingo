@@ -28,7 +28,7 @@ It is a DuoLingo-type app to teach basic principles of coding. There will be mul
 # Useful Websites
 
 * [Koltin tutorial in w3school](https://www.w3schools.com/KOTLIN/index.php)
-* [Android Studio official site]([http://url.link.goes.here](https://developer.android.com/studio))
+* [Android Studio official site](https://developer.android.com/studio)
 
 # Future Work
 
