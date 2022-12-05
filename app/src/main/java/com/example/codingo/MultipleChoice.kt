@@ -1,9 +1,12 @@
 package com.example.codingo
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 
@@ -19,6 +22,12 @@ class MultipleChoice : AppCompatActivity() {
     lateinit var validityOutput : TextView
     lateinit var lessonName : TextView
     lateinit var livesOutput : TextView
+    lateinit var menuButton: Button
+    lateinit var gameOver: ImageView
+    lateinit var sitting : ImageView
+    lateinit var correct : ImageView
+    lateinit var sad_animation: AnimationDrawable
+    lateinit var correctAnimation: AnimationDrawable
 
 
 
@@ -49,10 +58,37 @@ class MultipleChoice : AppCompatActivity() {
         validityOutput = findViewById(R.id.validityOutput)
         lessonName = findViewById(R.id.lessonName)
         livesOutput = findViewById(R.id.livesLeft)
+        menuButton = findViewById(R.id.mainMenu)
+        gameOver = findViewById(R.id.sadDingo)
+        gameOver.setBackgroundResource(R.drawable.sad_animation)
+        sad_animation = gameOver.background as AnimationDrawable
+        sitting = findViewById(R.id.dingoSitting)
+        correct = findViewById(R.id.correct)
+        correct.setBackgroundResource(R.drawable.dingo_idle_animation)
+        correctAnimation = correct.background as AnimationDrawable
+
+        menuButton.visibility = View.GONE
+
+        gameOver.visibility = View.GONE
+
+        menuButton.setOnClickListener {
+            val intent = Intent(this, Welcome::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         lessonName.text = getString(R.string.lesson_1_name) + ": " + getString(R.string.lesson_1_title)
 
         fun loadQuestions(questionNumber : Int, lessonNumber: Int, question: Array<String>) {
+            correct.visibility = View.GONE
+            sitting.visibility = View.VISIBLE
+            validityOutput.text = ""
+            continueButton.visibility = View.GONE
+            backButton.visibility = View.GONE
+            choice1.visibility = View.VISIBLE
+            choice2.visibility = View.VISIBLE
+            choice3.visibility = View.VISIBLE
+            choice4.visibility = View.VISIBLE
 
             val questionIndex = questionNumber * 6
             lessonName.text = "Module " + lessonNumber.toString()
@@ -65,11 +101,41 @@ class MultipleChoice : AppCompatActivity() {
             val answer : String = question[questionIndex + 5]
             fun checkValidity(button: Button) {
                 if (button.text == answer) {
+                    sitting.visibility = View.GONE
+                    correct.visibility = View.VISIBLE
                     validityOutput.text = "That is correct!"
+                    choice1.visibility = View.GONE
+                    choice2.visibility = View.GONE
+                    choice3.visibility = View.GONE
+                    choice4.visibility = View.GONE
+                    continueButton.visibility = View.VISIBLE
+                    backButton.visibility = View.VISIBLE
                 } else {
-                    lives -= 1
-                    livesOutput.text = "Lives: " + lives.toString()
-                    validityOutput.text = "That is incorrect!"
+
+                    if (lives >= 2) {
+                        lives -= 1
+                        livesOutput.text = "Lives: " + lives.toString()
+                        validityOutput.text = "That is incorrect!"
+                    }
+                    else {
+                        lives = 0
+                        gameOver.visibility = View.VISIBLE
+                        livesOutput.text = "Lives: " + lives.toString()
+                        validityOutput.text = "Game Over"
+
+                        sitting.visibility = View.GONE
+                        menuButton.visibility = View.VISIBLE
+                        questionOutput.visibility = View.GONE
+                        choice1.visibility = View.GONE
+                        choice2.visibility = View.GONE
+                        choice3.visibility = View.GONE
+                        choice4.visibility = View.GONE
+                        continueButton.visibility = View.GONE
+                        backButton.visibility = View.GONE
+                        lessonName.visibility = View.GONE
+                        livesOutput.visibility = View.GONE
+
+                    }
                 }
             }
 
@@ -123,5 +189,9 @@ class MultipleChoice : AppCompatActivity() {
 
     }
 
-
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        sad_animation.start()
+        correctAnimation.start()
+    }
 }

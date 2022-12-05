@@ -27,8 +27,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
         android:layout_marginEnd="177dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text=""
         android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 1"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/question" />
@@ -65,7 +71,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 2"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
@@ -76,7 +85,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="17dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 3"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -89,7 +101,10 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="258dp"
         android:layout_marginBottom="63dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="choice 4"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -102,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="20dp"
-        android:text="hintsleft"
+        android:text="Hints"
         app:layout_constraintBottom_toTopOf="@+id/lessonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -115,30 +130,31 @@
         android:layout_marginEnd="12dp"
         android:text="Lives: 5"
         app:layout_constraintBottom_toTopOf="@+id/lessonName"
-        app:layout_constraintEnd_toStartOf="@+id/jeep"
+        app:layout_constraintEnd_toStartOf="@+id/livesIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:id="@+id/hintsIcon"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/lessonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_star_big_off" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hinticon" />
 
     <ImageView
-        android:id="@+id/jeep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/livesIcon"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toTopOf="@+id/lessonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
+        app:srcCompat="@drawable/livesicon_1" />
 
     <Button
         android:id="@+id/nextQuestion"
@@ -163,4 +179,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="148dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Main Menu"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validityOutput" />
+
+    <ImageView
+        android:id="@+id/sadDingo"
+        android:layout_width="247dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/dingoSitting"
+        android:layout_width="84dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/livesLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sitting_1" />
+
+    <ImageView
+        android:id="@+id/correct"
+        android:layout_width="84dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/livesLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="356dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
