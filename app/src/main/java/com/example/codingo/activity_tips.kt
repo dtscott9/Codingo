@@ -62,6 +62,8 @@ class activity_tips : AppCompatActivity() {
         next = findViewById(R.id.next)
         next.setOnClickListener{
             val intent = Intent(this, MultipleChoice::class.java)
+            intent.putExtra("lessonNumber", lessonNumber)
+            intent.putExtra("lessonName", lessonName)
             startActivity(intent)
             finish()
         }

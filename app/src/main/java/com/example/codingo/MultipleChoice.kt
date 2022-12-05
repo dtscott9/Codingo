@@ -161,7 +161,9 @@ class MultipleChoice : AppCompatActivity() {
         continueButton.setOnClickListener {
 
             if (questionNumber >= ((question.size / 6) - 1)) {
-
+                val intent = Intent(this, Welcome::class.java)
+                startActivity((intent))
+                finish()
             } else {
                 questionNumber += 1
                 loadQuestions(questionNumber, lessonNumber, question)
