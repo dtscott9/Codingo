@@ -56,6 +56,7 @@ class activity_tips : AppCompatActivity() {
                 lessonPic2.setImageResource(R.drawable.lesson2_pic_1)
 
             }
+
             else if (lessonNum == 3) {
                 lessonIntro.text = resources.getString((R.string.loops))
                 tip1.text = resources.getString((R.string.while_loops))
@@ -64,6 +65,16 @@ class activity_tips : AppCompatActivity() {
                 lessonPic2.setImageResource(R.drawable.for_loop)
                 tip3.text = resources.getString((R.string.char_loop))
                 lessonPic3.setImageResource(R.drawable.char_loop)
+            }
+
+            else if (lessonNum == 5) {
+                lessonIntro.text = resources.getString(R.string.tip1)
+                tip2.text = resources.getString(R.string.tip2)
+                lessonPic1.setImageResource(R.drawable.lesson5_pic_1_tip2)
+                tip3.text = resources.getString(R.string.tip3)
+                lessonPic2.setImageResource(R.drawable.lesson5_pic_2_tip3)
+
+
             }
         }
 
