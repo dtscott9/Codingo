@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         passInput = findViewById(R.id.passwordReg)
 
 
-
+        // Go to login activity if button is clicked
         loginButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -35,11 +35,16 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         regButton.setOnClickListener {
+            // Get the values of the inputs after clicking the button
             val emailReg = emailInput.text.toString()
             val passwordReg = passInput.text.toString()
+
+            // Check if the fields have values
             if (emailReg.isNotEmpty() && passwordReg.isNotEmpty()) {
 
                 auth.createUserWithEmailAndPassword(emailReg, passwordReg).addOnCompleteListener {
+                    // If the onCompleteListener is successful in creating a login, user is logged in. Send to next activity.
+                    // Otherwise, give an exception saying what went wrong from Firebase in a Toast message.
                     if (it.isSuccessful) {
                         val login = Intent(this, MainActivity::class.java)
                         startActivity(login)
@@ -48,6 +53,7 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
             }
+            // If a field is empty, give a Toast message
             else {
                 Toast.makeText(this, "Fields can't be empty", Toast.LENGTH_SHORT).show()
             }
