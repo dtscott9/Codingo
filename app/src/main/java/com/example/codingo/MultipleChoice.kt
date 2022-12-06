@@ -43,6 +43,7 @@ class MultipleChoice : AppCompatActivity() {
         val question = when (lessonNumber) {
             1 -> resources.getStringArray(R.array.module_1_questions)
             2 ->  resources.getStringArray(R.array.module_2_questions)
+            3 -> resources.getStringArray(R.array.module_3_questions)
             else ->  resources.getStringArray(R.array.module_1_questions)
         }
         var lives = 5

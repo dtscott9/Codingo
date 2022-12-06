@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_3_name">Module 2</string>
+
+    <string name="lesson_3_name">Lesson 1</string>
+
+    <string name="lesson_3_title">Loops</string>
+
+    <string name="loops">You may run into a situation where you need to run the same snippet of
+    code several times over. One may think that they could just copy and paste those few snippets
+    however many times needed. The problem is this is really inefficient and would take a long
+    time. Luckily, there is a way to accomplish this with only a few lines of code. We can use "loops"
+    to iterate through a specific line of code however many times we want, or until a certain
+    condition is met. In Python, we use two different types of loops: While loops and For loops</string>
+
+    <string name="while_loops">A while loops can be used to loop through code until a certain condition is met.
+    They are commonly used with boolean variables, for example the loop keeps going until the variable is assigned
+    a value of either true or false. However, they can be used for pretty much any condition. If I wanted to keep
+    adding 1 to an int variable until that variable\'s value was 10, my while loop might look something like this:
+    </string>
+
+    <string name="for_loops">We can use for loops to iterate through a sequence or list of items. For example
+    if we have an array that\'s defined as:\n
+        languages = ["python", "Java", "Kotlin"]\n
+    and we wanted to print out each item in the list, we would use the loop like so:</string>
+
+    <string name="char_loop">You can also use a for loop through each letter in a string. In this case
+    the string acts as a char array. It would look like this:</string>
+
+
+    <string-array name="module_3_questions">
+        <!--All of the questions and answer choices are stored into one string-array.-->
+        <item >Which loop iterates until a condition is met?</item> <!-- Question 1-->
+        <item >For</item> <!-- Answer choice 1-->
+        <item>Foreach</item> <!-- Answer choice 2-->
+        <item>While</item> <!-- Answer choice 3-->
+        <item>Switch</item> <!-- Answer choice 4-->
+        <item>While</item> <!-- Answer -->
+
+        <item>Which loop iterates over a sequence</item> <!-- Next question -->
+        <item>Foreach</item>
+        <item>For</item>
+        <item>While</item>
+        <item>When</item>
+        <item >For</item>
+
+        <item>What will be the third item printed: for char in "loop"</item> <!-- Next question -->
+        <item>P</item>
+        <item>L</item>
+        <item>O</item>
+        <item>char</item>
+        <item >O</item>
+
+        <item>How many times will this loop iterate? for x in range(7)</item> <!-- Next question -->
+        <item>5</item>
+        <item>9</item>
+        <item>8</item>
+        <item>7</item>
+        <item >7</item>
+
+    </string-array>
+</resources>

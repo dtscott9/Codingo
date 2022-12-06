@@ -13,6 +13,7 @@ class Map : AppCompatActivity() {
     private lateinit var jeepImage: ImageView
     private lateinit var begin:Button
     private lateinit var lesson:TextView
+    private lateinit var lessonHint: TextView
     private lateinit var tips:Button
     private lateinit var lessonContent: TextView
     private lateinit var homeButton: Button
@@ -24,11 +25,21 @@ class Map : AppCompatActivity() {
         tips = findViewById(R.id.tips)
         homeButton = findViewById(R.id.homeButton)
         lessonContent = findViewById(R.id.unitContent)
+        lessonHint = findViewById(R.id.lessonHint)
         val prevIntent:Intent = getIntent()
         val lessonNumber = prevIntent.getIntExtra("lessonNumber", 0)
         val lessonName = prevIntent.getStringExtra("lessonName")
         lesson.text = "Lesson ${lessonNumber}:"
         lessonContent.text = lessonName
+
+        lessonHint.text = when (lessonNumber) {
+            1 -> "greeting = 'Hello World'"
+            2 -> "if false: print('not true')"
+            3 -> "for x in banana: print(x)"
+            4 -> "def my_function(): print('Hello World')"
+            5 -> "class my_class: print('Hello World')"
+            else -> "greeting = 'Hello World'"
+        }
 
         //Animation Variables
         jeepImage = findViewById(R.id.livesIcon)
