@@ -30,8 +30,10 @@ class MainActivity : AppCompatActivity() {
 
 
         signIn.setOnClickListener {
+            // Check the values of the inputs after clicking the on click listener. Fields were initialized before the onCreate function and will show empty otherwise.
             val email = emailInput.text.toString()
             val password = passInput.text.toString()
+
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
     public override fun onStart() {
         super.onStart()
-        // Checking if user is signed in, if so, sending them to next activity
+        // Checks if user is signed in when the app starts. If they are, send them to next activity
         val currentUser = Firebase.auth.currentUser
         if (currentUser != null) {
             val intent = Intent(this, com.example.codingo.Welcome::class.java)
