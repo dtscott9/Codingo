@@ -68,12 +68,12 @@ class activity_tips : AppCompatActivity() {
             }
 
             else if (lessonNum == 5) {
-                lessonIntro.text = resources.getString(R.string.tip1)
+                lessonIntro.text = resources.getString((R.string.tip1))
+                lessonPic1.setImageResource(R.drawable.lesson5_pic_2_tip3)
                 tip2.text = resources.getString(R.string.tip2)
-                lessonPic1.setImageResource(R.drawable.lesson5_pic_1_tip2)
+                lessonPic2.setImageResource(R.drawable.lesson5_pic_4_tip5)
                 tip3.text = resources.getString(R.string.tip3)
-                lessonPic2.setImageResource(R.drawable.lesson5_pic_2_tip3)
-
+                lessonPic3.setImageResource(R.drawable.lesson5_pic_5_tip6)
 
             }
         }

@@ -7,25 +7,21 @@
     <string name="tip1">Python is an object oriented programming language.
         Almost everything in Python is an object, with its properties and methods.
         A Class is like an object constructor, or a "blueprint" for creating objects.
-    </string>
-    <string name="tip2">Create a Class
         To create a class, use the keyword class.
-        Example:
-        Create a class named MyClass, with a property named x:
-        class MyClass:
-            x = 5
         Generally, class names are typed with Upper Camel Case.
-    </string>
+        \n\nExample:
+        Create a class named MyClass, with a property named x:\n\n
+        class MyClass:
+            x = 5\n\n
 
-    <string name="tip3">Now we can use the class named MyClass to create objects:
-        Example
-        Create an object named p1, and print the value of x:
+        Now we can use the class named MyClass to create objects.
+        To create an object named p1 and print the value of x, type:\n\n
 
-        p1 = MyClass()
+        p1 = MyClass()\n
         print(p1.x)
     </string>
 
-    <string name="tip4">The __init__() Function
+    <string name="tip2">The __init__() Function
         The examples above are classes and objects in their simplest form, and are not
         really useful in real life applications.
 
@@ -35,60 +31,48 @@
         is being initiated.
 
         Use the __init__() function to assign values to object properties, or other
-        operations that are necessary to do when the object is being created.
+        operations that are necessary to do when the object is being created.\n\n
+
+        The self parameter is a reference to the current instance of the class,
+        and is used to access variables that belongs to the class.
+
+        It does not have to be named self , you can call it whatever you like, but it has to be
+        the first parameter of any function in the class. Common practice however, is to have it
+        be named self to avoid any confusion.\n\n
 
         Example: Create a class named Person, use the __init__() function to assign
         values for name and age.
-    </string>
+        </string>
 
-    <string name="tip5">Objects can also contain methods. Methods in objects are functions
+    <string name="tip3">Objects can also contain methods. Methods in objects are functions
         that belong to the object.
 
         Let us create a method in the Person class.
         Example: Insert a function (method) that prints a greeting, and execute it on the p1 object.
     </string>
 
-    <string name="tip6">The self parameter is a reference to the current instance of the class,
-        and is used to access variables that belongs to the class.
-
-        It does not have to be named self , you can call it whatever you like, but it has to be
-        the first parameter of any function in the class. Common practice however, is to have it
-        be named self to avoid any confusion.
-        Example: Use the words whoami and python instead of self.
-    </string>
-    <string name="tip7">You can modify properties on objects like this:
-
-        Example: Set the age of p1 to 40 by calling the object and method and using the
-        \'=\' sign to set the value.
-
-        p1.age = 40
-    </string>
-    <string name="tip8">Class definitions cannot be empty, but if you for some reason have a
-        class definition with no content, put in the pass statement to avoid getting an error.
-    </string>
-
     <string-array name="module_5_questions">
         <!--All of the questions and answer choices are stored into one string-array.-->
-        <item name="question_1">How do you create a class?</item> <!-- Question 1-->
-        <item name="question_1_choice_1">new Class: MyCLass</item> <!-- Answer choice 1-->
-        <item name="question_1_choice_2">class: MyClass</item> <!-- Answer choice 2-->
-        <item name="question_1_choice_3">python.class = MyClass</item> <!-- Answer choice 3-->
-        <item name="question_1_choice_4">fun class()</item> <!-- Answer choice 4-->
-        <item name="answer_1">class: MyClass</item> <!-- Answer -->
+        <item>How do you create a class?</item> <!-- Question 1-->
+        <item>new Class: MyCLass</item> <!-- Answer choice 1-->
+        <item>class: MyClass</item> <!-- Answer choice 2-->
+        <item>python.class = MyClass</item> <!-- Answer choice 3-->
+        <item>fun class()</item> <!-- Answer choice 4-->
+        <item>class: MyClass</item> <!-- Answer -->
 
         <item>How do you instantiate an object of one of your classes?</item> <!-- Next question -->
         <item>x = MyClass()</item>
         <item>new Object from MyClass = x</item>
         <item>fun MyClass() = new.x</item>
         <item>x = new MyClass()</item>
-        <item name="answer_2">x = MyClass()</item>
+        <item>x = MyClass()</item>
 
         <item>How do you create a method in a class that does nothing?</item> <!-- Next question -->
         <item>mymethod() {Pass = True}</item>
         <item>MyClass.mymethod.pass()</item>
         <item>def mymethod() {skip}</item>
         <item>def mymethod() {pass}</item>
-        <item name="answer_3">def mymethod() {pass}</item>
+        <item>def mymethod() {pass}</item>
 
         <item>What does the __init__() function do?</item> <!-- Next question -->
         <item>Tells the class where to go to get data to populate an object.</item>
@@ -96,7 +80,7 @@
         <item>Assigns values to object properties, or other operations that are necessary
             to do when the object is being created.</item>
         <item>Creates an instance of the object.</item>
-        <item name="answer_4">Assigns values to object properties, or other operations that are necessary
+        <item>Assigns values to object properties, or other operations that are necessary
             to do when the object is being created.</item>
 
     </string-array>
