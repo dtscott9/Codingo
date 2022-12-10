@@ -1,8 +1,5 @@
 # Overview
-
-{Provide a description of your team project.  Describe how to use the software.}
-
-The name of the project we call it Codingo
+Codingo
 
 <img src="image.png" alt="image.png" width="300"/>
 
@@ -32,6 +29,6 @@ It is a DuoLingo-type app to teach basic principles of coding. There will be mul
 
 # Future Work
 
-* Item 1
-* Item 2
-* Item 3
+* Add tutorials for more programming languages
+* Add a progress tracker and leaderboard to share your growth with others
+* Add sound effects
